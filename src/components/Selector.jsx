@@ -1,12 +1,22 @@
 import React, { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
+import { IoCheckmarkOutline } from "react-icons/io5";
 
 const Selector = () => {
   const [flightType, setFlightType] = useState("First class");
   const [open, setOpen] = useState(false);
-  const flights = ["First class", "Economy", "Premium economy", "Business class"];
+  const flights = [
+    "First class",
+    "Economy",
+    "Premium economy",
+    "Business class",
+  ];
+  const handleSelect = (index) => {
+    setFlightType(flights[index]);
+    setOpen(false);
+  };
   return (
-    <div className="relative w-[170px]">
+    <div className="relative w-[200px]">
       <button
         onClick={() => setOpen(!open)}
         aria-expanded="false"
@@ -16,9 +26,16 @@ const Selector = () => {
         <IoIosArrowDown />
       </button>
       {open && (
-        <div className="rounded-lg shadow-lg py-3 absolute top-9 w-full">
+        <div className="rounded-lg shadow-xl py-3 absolute top-9 w-auto">
           {flights?.map((item, index) => (
-            <div key={index} className="hover:bg-[#c0c0c0]">{item}</div>
+            <div
+              onClick={() => handleSelect(index)}
+              key={index}
+              className="hover:bg-[#b9c4e7] py-3 cursor-pointer flex gap-2 items-center pr-3"
+            >
+              <span className="pl-4 pr-2 text-sm">{item}</span>
+              {item === flightType && <IoCheckmarkOutline />}
+            </div>
           ))}
         </div>
       )}
