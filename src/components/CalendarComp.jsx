@@ -45,7 +45,7 @@ const CalendarComp = () => {
   return (
     <div
       onClick={() => setOpen(true)}
-      className="min-w-[250px] sm:w-auto w-full cursor-pointer h-[50px] border border-[#818494] rounded-md flex gap-4 items-center px-2 relative"
+      className="min-w-[250px] sm:w-auto w-full cursor-pointer h-[50px] border border-[#818494] rounded-md flex gap-4 items-center px-2 relative sm:flex-1"
     >
       <IoCalendarOutline size={20} />
       <div className="flex flex-col">
@@ -59,7 +59,7 @@ const CalendarComp = () => {
           <Calendar
             // date={new Date()}
             onChange={handleSelect}
-            className="absolute top-[50px] shadow-lg rounded-md left-0 border border-gray-400"
+            className="absolute top-[50px] shadow-lg rounded-md left-0 border border-gray-400 z-[999]"
           />
         )}
       </div>

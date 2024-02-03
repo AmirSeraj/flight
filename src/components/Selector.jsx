@@ -26,7 +26,7 @@ const Selector = () => {
         <IoIosArrowDown />
       </button>
       {open && (
-        <div className="rounded-lg shadow-xl py-3 absolute top-9 w-auto">
+        <div className="rounded-lg shadow-xl py-3 absolute top-9 w-auto z-[999] bg-white">
           {flights?.map((item, index) => (
             <div
               onClick={() => handleSelect(index)}

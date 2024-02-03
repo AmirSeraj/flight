@@ -1,6 +1,8 @@
 "use client";
 import Selector from "@/components/Selector";
 import Tab1 from "@/components/Tab1";
+import Tab2 from "@/components/Tab2";
+import Tab3 from "@/components/Tab3";
 import { useState } from "react";
 
 export default function Home() {
@@ -38,8 +40,8 @@ export default function Home() {
           <Selector />
         </div>
         {tab === "tab1" && <Tab1 />}
-        {/* {tab === "tab2" && <tab2 />} */}
-        {/* {tab === "tab3" && <Box>tab3</Box>} */}
+        {tab === "tab2" && <Tab2 />}
+        {tab === 'tab3' && <Tab3 />}
       </div>
     </main>
   );

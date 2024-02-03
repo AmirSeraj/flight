@@ -16,6 +16,22 @@ const Tab1 = () => {
         <Travelers />
         <Search />
       </div>
+      <div className="flex gap-4 items-center mt-3">
+        <div className="flex items-center gap-2">
+          <input
+            type="checkbox"
+            className="h-5 w-5 text-blue-500 cursor-pointer border border-gray-300 rounded checked:bg-blue-500 checked:border-transparent focus:outline-none focus:ring focus:border-blue-300"
+          />
+          <span className="text-sm">Add a place to stay</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <input
+            type="checkbox"
+            className="h-5 w-5 text-blue-500 cursor-pointer border border-gray-300 rounded checked:bg-blue-500 checked:border-transparent focus:outline-none focus:ring focus:border-blue-300"
+          />
+          <span className="text-sm">Add a car</span>
+        </div>
+      </div>
     </div>
   );
 };
